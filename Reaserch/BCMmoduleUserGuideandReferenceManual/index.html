@@ -1,0 +1,1397 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A Academy Corner for Everyone">
+      
+      
+      
+        <meta name="author" content="Xie Jia-hao, Wang xiao-yu">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>***BCMmodule*** 使用指南 v 0.1.0 - On The Way</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#bcmmodule-v-010" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="On The Way" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                On The Way
+              </span>
+              <span class="md-header-nav__topic">
+                ***BCMmodule*** 使用指南 v 0.1.0
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="首页" class="md-tabs__link">
+        首页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Program/anaconda23共存/" title="编程笔记" class="md-tabs__link">
+          编程笔记
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../ferroelectric_learn/" title="科研笔记" class="md-tabs__link">
+          科研笔记
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../ReadingNotes/跃迁/" title="阅读笔记" class="md-tabs__link">
+          阅读笔记
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="On The Way" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    On The Way
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="首页" class="md-nav__link">
+      首页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      编程笔记
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        编程笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Program/anaconda23共存/" title="anaconda2 与 anaconda3 共存解决方案" class="md-nav__link">
+      anaconda2 与 anaconda3 共存解决方案
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Program/github使用/" title="github的使用" class="md-nav__link">
+      github的使用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Program/os.walk用法/" title="Python中os.walk函数的用法（遍历文件夹下文件并获得路径）" class="md-nav__link">
+      Python中os.walk函数的用法（遍历文件夹下文件并获得路径）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Program/scipy学习/" title="scipy学习" class="md-nav__link">
+      scipy学习
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Program/f2py_use/" title="利用f2py实现python调用fortran" class="md-nav__link">
+      利用f2py实现python调用fortran
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Program/mkdocs_use/" title="MkDocs 使用日常" class="md-nav__link">
+      MkDocs 使用日常
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Program/生成GFM目录/" title="自动生成GFM目录" class="md-nav__link">
+      自动生成GFM目录
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      科研笔记
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        科研笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      铁电与SHG
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        铁电与SHG
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ferroelectric_learn/" title="铁电性复习" class="md-nav__link">
+      铁电性复习
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PFM&SKFM/" title="PFM和SKPFM学习" class="md-nav__link">
+      PFM和SKPFM学习
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SHG_learn/" title="SHG（二次谐波）学习" class="md-nav__link">
+      SHG（二次谐波）学习
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      EPM
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        EPM
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fundamental_of_EPM/" title="EPM相关的基础知识" class="md-nav__link">
+      EPM相关的基础知识
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      结构表征方法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        结构表征方法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SortStructure/" title="大量结构中去除相似结构算法开发" class="md-nav__link">
+      大量结构中去除相似结构算法开发
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ***BCMmodule*** 使用指南 v 0.1.0
+      </label>
+    
+    <a href="./" title="***BCMmodule*** 使用指南 v 0.1.0" class="md-nav__link md-nav__link--active">
+      ***BCMmodule*** 使用指南 v 0.1.0
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1    结构表征与筛选方法" class="md-nav__link">
+    1    结构表征与筛选方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-bcm" title="1.1 BCM方法" class="md-nav__link">
+    1.1 BCM方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" title="1.2 分层聚类" class="md-nav__link">
+    1.2 分层聚类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" title="1.3 结构筛选的实现" class="md-nav__link">
+    1.3 结构筛选的实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" title="2    环境配置及编译" class="md-nav__link">
+    2    环境配置及编译
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-fortranpython" title="2.1 Fortran程序的python包装" class="md-nav__link">
+    2.1 Fortran程序的python包装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" title="2.2 版本问题" class="md-nav__link">
+    2.2 版本问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" title="2.3 环境配置及编译" class="md-nav__link">
+    2.3 环境配置及编译
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-3" title="3    使用程序3步完成结构筛选" class="md-nav__link">
+    3    使用程序3步完成结构筛选
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-bcm" title="3.1 BCM批量计算并聚类分析" class="md-nav__link">
+    3.1 BCM批量计算并聚类分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" title="3.2 根据聚类分析图像确定聚类代数" class="md-nav__link">
+    3.2 根据聚类分析图像确定聚类代数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" title="3.2.1 绘制图像" class="md-nav__link">
+    3.2.1 绘制图像
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" title="3.2.2 分析图像" class="md-nav__link">
+    3.2.2 分析图像
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323" title="3.2.3 确定聚类步数" class="md-nav__link">
+    3.2.3 确定聚类步数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" title="3.3 确定聚类结果并生成代表结构" class="md-nav__link">
+    3.3 确定聚类结果并生成代表结构
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" title="4    使用流程总结" class="md-nav__link">
+    4    使用流程总结
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      科研软件
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        科研软件
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-1" type="checkbox" id="nav-3-4-1">
+    
+    <label class="md-nav__link" for="nav-3-4-1">
+      VASP软件
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-1">
+        VASP软件
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vasplearn/" title="第一性原理计算软件VASP使用学习" class="md-nav__link">
+      第一性原理计算软件VASP使用学习
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-2" type="checkbox" id="nav-3-4-2">
+    
+    <label class="md-nav__link" for="nav-3-4-2">
+      Abinit软件
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-2">
+        Abinit软件
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../abinit_learn/" title="Abinit 软件使用" class="md-nav__link">
+      Abinit 软件使用
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-3" type="checkbox" id="nav-3-4-3">
+    
+    <label class="md-nav__link" for="nav-3-4-3">
+      Exciting软件
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-3">
+        Exciting软件
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exciting/" title="Exciting软件学习" class="md-nav__link">
+      Exciting软件学习
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      阅读笔记
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        阅读笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ReadingNotes/跃迁/" title="跃迁" class="md-nav__link">
+      跃迁
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1    结构表征与筛选方法" class="md-nav__link">
+    1    结构表征与筛选方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-bcm" title="1.1 BCM方法" class="md-nav__link">
+    1.1 BCM方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" title="1.2 分层聚类" class="md-nav__link">
+    1.2 分层聚类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" title="1.3 结构筛选的实现" class="md-nav__link">
+    1.3 结构筛选的实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" title="2    环境配置及编译" class="md-nav__link">
+    2    环境配置及编译
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-fortranpython" title="2.1 Fortran程序的python包装" class="md-nav__link">
+    2.1 Fortran程序的python包装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" title="2.2 版本问题" class="md-nav__link">
+    2.2 版本问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" title="2.3 环境配置及编译" class="md-nav__link">
+    2.3 环境配置及编译
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-3" title="3    使用程序3步完成结构筛选" class="md-nav__link">
+    3    使用程序3步完成结构筛选
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-bcm" title="3.1 BCM批量计算并聚类分析" class="md-nav__link">
+    3.1 BCM批量计算并聚类分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" title="3.2 根据聚类分析图像确定聚类代数" class="md-nav__link">
+    3.2 根据聚类分析图像确定聚类代数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" title="3.2.1 绘制图像" class="md-nav__link">
+    3.2.1 绘制图像
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" title="3.2.2 分析图像" class="md-nav__link">
+    3.2.2 分析图像
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323" title="3.2.3 确定聚类步数" class="md-nav__link">
+    3.2.3 确定聚类步数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" title="3.3 确定聚类结果并生成代表结构" class="md-nav__link">
+    3.3 确定聚类结果并生成代表结构
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" title="4    使用流程总结" class="md-nav__link">
+    4    使用流程总结
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="bcmmodule-v-010"><strong><em>BCMmodule</em></strong> 使用指南 v 0.1.0<a class="headerlink" href="#bcmmodule-v-010" title="Permanent link">&para;</a></h1>
+<p><strong><em>BCMmodule</em></strong> python模块由几个简单的python程序组成，能够基本实现在大量结构中去除相似结构，筛选出少量不同结构的目的。</p>
+<div class="toc">
+<ul>
+<li><a href="#bcmmodule-v-010">BCMmodule 使用指南 v 0.1.0</a><ul>
+<li><a href="#1">1    结构表征与筛选方法</a><ul>
+<li><a href="#11-bcm">1.1 BCM方法</a></li>
+<li><a href="#12">1.2 分层聚类</a></li>
+<li><a href="#13">1.3 结构筛选的实现</a></li>
+</ul>
+</li>
+<li><a href="#2">2    环境配置及编译</a><ul>
+<li><a href="#21-fortranpython">2.1 Fortran程序的python包装</a></li>
+<li><a href="#22">2.2 版本问题</a></li>
+<li><a href="#23">2.3 环境配置及编译</a></li>
+</ul>
+</li>
+<li><a href="#3-3">3    使用程序3步完成结构筛选</a><ul>
+<li><a href="#31-bcm">3.1 BCM批量计算并聚类分析</a></li>
+<li><a href="#32">3.2 根据聚类分析图像确定聚类代数</a><ul>
+<li><a href="#321">3.2.1 绘制图像</a></li>
+<li><a href="#322">3.2.2 分析图像</a></li>
+<li><a href="#323">3.2.3 确定聚类步数</a></li>
+</ul>
+</li>
+<li><a href="#33">3.3 确定聚类结果并生成代表结构</a></li>
+</ul>
+</li>
+<li><a href="#4">4    使用流程总结</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="1">1    结构表征与筛选方法<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>人们通常使用的结构表示方法为在笛卡尔坐标系中以原子坐标的形式描述原子的位置。这种最为常用的方法虽然可以准确的描述结构，但随坐标系选择和原子排序方式的不同有无数种表示形式，所以无法真正用于材料结构之间的对比和分类。</p>
+<p>各类结构表征方法就是指与常用的在笛卡尔坐标系中表示原子位置的方法不同的结构表示方法，表征结果往往具有可以计算对比结构之间差别的特点。</p>
+<h3 id="11-bcm">1.1 BCM方法<a class="headerlink" href="#11-bcm" title="Permanent link">&para;</a></h3>
+<p>BCM(Bond-Orientation-Matrix)方法是一种基于BOO(Bond-Orientation-Order)方法的结构表征方法，可以提取结构中原子间连线的角度信息，并且能将元素种类数相同的结构表示为维数相同的矩阵，从而实现对比不同结构的目的。</p>
+<h3 id="12">1.2 分层聚类<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>分层聚类是聚类算法的一种，通过计算不同类别的相似度创建一个有层次的嵌套的树。假设有 n 个待聚类的样本，对于层次聚类算法，它的步骤是：</p>
+<ul>
+<li>步骤一：（初始化）将每个样本都视为一个聚类</li>
+<li>步骤二：计算各个聚类之间的相似度</li>
+<li>步骤三：寻找最近的两个聚类，将他们归为一类</li>
+<li>步骤四：重复步骤二，步骤三；直到所有样本归为一类</li>
+</ul>
+<p>所以在分层聚类中有以下特征：</p>
+<ul>
+<li>聚类是分步进行的</li>
+<li>起始类数即输入的样本数量<code>n</code></li>
+<li>每一步聚类将两类聚为一类，使得总类数减少<code>1</code></li>
+<li>聚类总共进行<code>n-1</code>步，使得所有样本聚为一类</li>
+<li>在完成第<code>m</code>步聚类后，剩余类数目为<code>n-m</code></li>
+</ul>
+<h3 id="13">1.3 结构筛选的实现<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>利用BCM结构表征方法，用分层聚类处理结果实现结构筛选的流程如下：</p>
+<ul>
+<li>批量计算大量结构的BCM矩阵。</li>
+<li>对于大量的表征结果，用分层聚类的方法完成整个聚类过程。</li>
+<li>对聚类结果进行处理和分析，作出聚类距离变化图。使用者可以根据分析图像或者自身需求自主决定聚类步数，将大量结构聚类为自主决定数量的类。</li>
+<li>从这些获得的类中选取每类的代表结构，实现从大量结构中去除相似结构的方法筛选出少量不同结构的目的。</li>
+</ul>
+<h2 id="2">2    环境配置及编译<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21-fortranpython">2.1 Fortran程序的python包装<a class="headerlink" href="#21-fortranpython" title="Permanent link">&para;</a></h3>
+<p>本程序的基础为计算BCM的Fortran程序。python中<code>NumPy</code>模块中的<code>f2py</code>程序可以将Fortran程序包装生成python模块。在本例中BCM计算Fortran程序为<code>BCMfunc.f90</code>,<code>car2sphe.f90</code>,<code>spherical.f90</code>三个文件，我们利用<code>f2py</code>程序将其编译包装成名为<code>fbcm.so</code>python库文件。</p>
+<h3 id="22">2.2 版本问题<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>在程序使用时涉及到环境版本兼容问题：</p>
+<ul>
+<li>
+<p><code>f2py</code>生成的为<code>.so</code>文件，为动态库文件，此类文件的调用时也需要调用C和Fortran编译器，所以调用<code>.so</code>文件时编译器版本需和生成<code>.so</code>文件编译器版本兼容。</p>
+</li>
+<li>
+<p>而且生成python模块接口的<code>f2py</code>程序属于<code>NumPy</code>模块的一部分，所以调用生成的python模块时的<code>NumPy</code>版本也需要和生成python模块的<code>NumPy</code>版本兼容。</p>
+</li>
+</ul>
+<p>所以涉及到编译环境和python环境在生成模块和使用模块时的匹配问题，所以建议在使用前在使用环境中使用<code>f2py</code>生成<code>fbcm.so</code>文件。生成命令见下一节编译部分。</p>
+<h3 id="23">2.3 环境配置及编译<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p>由于利用<code>f2py</code>转换Fortran程序时涉及到Fortran代码编译，且<code>f2py</code>属于<code>NumPy</code>模块，所以在使用<code>f2py</code>生成python模块时需要完备的C和Fortran编译环境和完备的python环境。</p>
+<ul>
+<li>经过测试，宝德和五洲集群上的编译环境均良好。</li>
+<li>宝德和五洲集群上经过测试可用的公用python环境分别为：<ul>
+<li>宝德：<code>/share/apps/pylada/bin/python</code></li>
+<li>五洲：<code>/opt/intel/software/python2.7/bin/python</code></li>
+</ul>
+</li>
+</ul>
+<p>其它python2.7版本应该也可以完成<code>fbcm.so</code>的生成操作。</p>
+<p>在配置好环境后在<code>BCM/</code>文件夹下执行下面的命令：</p>
+<div class="codehilite"><pre><span></span>f2py -c -m fbcm BCMfunc.f90 car2sphe.f90 spherical.f90
+</pre></div>
+
+<p>命令执行结束后若在文件夹中生成了<code>fbcm.so</code>文件则说明编译成功了。就可以开始使用程序了。</p>
+<h2 id="3-3">3    使用程序3步完成结构筛选<a class="headerlink" href="#3-3" title="Permanent link">&para;</a></h2>
+<p>在配置好编译环境和python环境，使用<code>f2py</code>生成了<code>fbcm.so</code>文件后，程序就可以运行了。使用程序完成结构筛选工作需要进行以下三个步骤：</p>
+<h3 id="31-bcm">3.1 BCM批量计算并聚类分析<a class="headerlink" href="#31-bcm" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>由于本步骤涉及到BCM计算，即涉及到调用<code>fbcm.so</code>文件，所以应在生成<code>fbcm.so</code>文件相同环境下执行。</strong></p>
+</blockquote>
+<p>此步进行的计算为，计算所有结构的BCM矩阵并完成整个层次聚类，将聚类信息保存下来。</p>
+<p>首先打开<code>calculate&amp;cluster.py</code>文件，其内容如下：</p>
+<p><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">bcmanalys</span> <span class="kn">import</span> <span class="n">__cluster</span>
+
+<span class="n">folderpath</span> <span class="o">=</span> <span class="s1">&#39;your structer files storage folderpath&#39;</span>
+
+<span class="n">__cluster</span><span class="p">(</span><span class="n">folderpath</span><span class="p">)</span>
+</pre></div>
+将其中<code>folderpath</code>变量改为需要计算的所有结构存储文件夹的绝对路径。程序会计算路径文件夹下所有结构文件，可以存在非结构文件。</p>
+<p>修改完毕后在命令行中执行：</p>
+<div class="codehilite"><pre><span></span>python calculate&amp;cluster.py
+</pre></div>
+
+<p>执行过程中会输出正在计算的文件路径，执行结束后会生成三个文件：</p>
+<ul>
+<li><code>name.txt</code>：储存了所有计算的文件名列表</li>
+<li><code>cluster.txt</code>：储存了聚类的结果</li>
+<li><code>cluster_result.npy</code>：二进制格式储存了聚类的结果，便于后续使用</li>
+</ul>
+<h3 id="32">3.2 根据聚类分析图像确定聚类代数<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p>由于在分层聚类中有以下特征：</p>
+<ul>
+<li>聚类是分步进行的</li>
+<li>起始类数即输入的样本数量<code>n</code></li>
+<li>每一步聚类将两类聚为一类，使得总类数减少<code>1</code></li>
+<li>聚类总共进行<code>n-1</code>步，使得所有样本聚为一类</li>
+<li>在完成第<code>m</code>步聚类后，剩余类数目为<code>n-m</code></li>
+</ul>
+<p>所以我们想达到将大量结构聚类为一定数量的类的目的，需要确定一个聚类的步数<code>m</code>，最后得到<code>n-m</code>个类。</p>
+<p>确定<code>m</code>的值可以由最后需求筛选得到多少种结构决定。假如我们想从总共<code>n</code>个结构中筛选得到<code>l</code>个结构，那么我们确定的聚类步数就为<code>m = n - l</code>.</p>
+<p>如果我们想达到从大量结构中筛选出少数不重复结构且尽量少丢失结构多样性目的，选择的聚类步数也需要在一定的合理范围内。若选择的步数太大，剩余类数很少，则会丢失许多并不相似的结构。选择步数很小时剩余结构过多达不到筛选结构的目的。</p>
+<p>为了使得我们选择的聚类步数在合理范围内，需要对聚类的结果进行分析，本程序提供了两种图像的绘制功能，分别是***聚类过程树状图***，和***聚类距离变化趋势图***。</p>
+<h4 id="321">3.2.1 绘制图像<a class="headerlink" href="#321" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>绘图函数并不直接保存图像，而是弹出<code>matplotlib</code>模块自带的查看器并在其中显示图像。这样做的原因是在分析大量结构的聚类结果时保存整个树状图或聚类距离变化趋势图的意义不大，需要在其自带查看器中进行局部放大分析。所以绘图操作的执行需要在一个GUI环境中进行，也就是无法在集群上进行。但这一步操作并不会调用<code>fbcm.so</code>文件，只需要具有<code>NumPy</code>模块和<code>matplotlib</code>模块的python环境即可。</strong></p>
+</blockquote>
+<p>上一步操作执行完毕后生成了聚类的结果信息，我们需要对聚类结果进行分析。在<code>ploy_cluster.py</code>文件内提供了两个聚类结果分析绘图函数，其内容如下：</p>
+<p><div class="codehilite"><pre><span></span><span class="c1"># coding: utf-8</span>
+
+<span class="kn">from</span> <span class="nn">clusteranalys</span> <span class="kn">import</span> <span class="n">plotcluster</span>
+<span class="kn">from</span> <span class="nn">clusteranalys</span> <span class="kn">import</span> <span class="n">plotgen_d</span>
+
+<span class="c1">#plotcluster() #聚类树状图，若需要聚类树状图需去掉本行开头注释</span>
+<span class="n">plotgen_d</span><span class="p">()</span>    <span class="c1">#聚类距离变化趋势图</span>
+</pre></div>
+想要得到哪种图像就执行对应的生成函数，默认第一个函数是注释掉的，即不执行的。若想要绘制聚类树状图需要去掉其生成函数前的注释，并将第二个函数前加入注释。若同时绘制两种图像需要将第一幅图像关闭后才能查看第二幅图像。</p>
+<p>执行<code>python plot_cluster.py</code>即可生成图片。</p>
+<h4 id="322">3.2.2 分析图像<a class="headerlink" href="#322" title="Permanent link">&para;</a></h4>
+<p><strong>聚类过程树状图</strong> 形式如下：</p>
+<p><img alt="" src="../media/15395727178605.jpg" /></p>
+<p>图像可以展示所有的类是如何一步步聚在一起的，但对于本工作其参考价值不大。
+可以看到大量结构的聚类过程树状图中最初的聚类步骤会很密集，我们将最底部放大：</p>
+<p><img alt="" src="../media/15395710566747.jpg" /></p>
+<p>注意两幅图片纵坐标尺度的变化，说明聚类开始时的类之间距离与后面过程有着数个数量级的差距。</p>
+<p>为了更好的分析聚类距离随步数的变化过程，我们需要做 <strong>聚类距离变化趋势图</strong> ：</p>
+<p><img alt="" src="../media/15395720352534.jpg" /></p>
+<p>此图像反应随着聚类步数的增加，每一步聚集在一起的两类之间的距离的变化趋势。</p>
+<p>上图所反应的主要内容为在大约前2800步聚类过程中，每一步聚在一起的两类之间的距离都接近于零且没有明显增长，说明前期聚在一起的类中的结构相似度很高。而在2800～2900步之间聚类距离开始增长，而且似乎有一个距离突变增加的过程。我们将局部的图像放大：</p>
+<p><img alt="" src="../media/15395838270360.jpg" /></p>
+<p>发现确实有一个距离突变增加的现象。说明在此步之后聚集在一起的类之间的结构相似程度比此步之前有明显减小，所以这一步所对应的步数是一个潜在合理的聚类结果步数。</p>
+<p>若还要继续选择其它结果，可以将结果曲线中曲率较大的部分放大：</p>
+<p><img alt="" src="../media/15395847226457.jpg" /></p>
+<p>分析上图的结论为，若选择3200代以后的聚类程度，损失的结构种类会比较多。因为总体上来说3200代以后每次聚类的两类之间的距离不仅较大，且增大速度也很快，所以若选3200代之后的代数，每增加一代，其合并的类不相似的程度就增大很多。</p>
+<h4 id="323">3.2.3 确定聚类步数<a class="headerlink" href="#323" title="Permanent link">&para;</a></h4>
+<p>结合分析图像和自身需求，最后确定聚类的步数。</p>
+<ul>
+<li>
+<p>若自主决定最后剩余结构数量为<code>l</code>,那么聚类的步数应为<code>n-l</code>,<code>n</code>为结构的总数。可以打开文件<code>name.txt</code>查看文件的总行数确定<code>n</code>的值。</p>
+<blockquote>
+<p>若共有3000个结构，希望筛选得到300个结构，那么聚类步数就选为3000-300=2700步</p>
+</blockquote>
+</li>
+<li>
+<p>若从聚类距离分析图某点根据其确定代数，可以打开<code>cluster.txt</code>详细确定其位置。</p>
+<p><code>cluster.txt</code>文件中每一行代表一步聚类的过程，其包含的信息有如下含义：
+<div class="codehilite"><pre><span></span>(合并的类标号1，合并的类标号2，合并的两类之间距离，合并后类中元素个数）
+</pre></div>
+所以用于确定聚类步数的为第三列距离信息，每一行的行号即为聚类的步数。</p>
+<blockquote>
+<p>对于上图中存在距离突变的聚类步数，我们在其对应的<code>cluster.txt</code>文件中可找到其详细为第2865步聚类后之后的聚类距离发生了突变，据此我们可以选择聚类步数为2865步。
+<img alt="" src="../media/15395893219623.jpg" /></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="33">3.3 确定聚类结果并生成代表结构<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>由于本步骤涉及到BCM计算，即涉及到调用<code>fbcm.so</code>文件，所以应在生成<code>fbcm.so</code>文件相同环境下执行。</strong></p>
+</blockquote>
+<p>确定了聚类的步数后，就可以生成最后的聚类结果。即所有结果聚类为指定数量的类，以及每类中有哪些结构。</p>
+<p>之后需要进行提取每类的代表结构：对于一个类，我们计算其中每个结构与其它所有同一类中结构的距离并求和，我们取与同类结构距离之和最小的结构来代表这个类。</p>
+<p>执行这两个操作的函数在文件<code>get_result.py</code>中。打开文件<code>get_result.py</code>，其内容如下：</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">clusteranalys</span> <span class="kn">import</span> <span class="n">__genget</span>
+<span class="kn">from</span> <span class="nn">bcmanalys</span> <span class="kn">import</span> <span class="n">__reprecluster</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="s1">&#39;decided generation number&#39;</span>
+<span class="n">__genget</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="n">__reprecluster</span><span class="p">()</span>
+</pre></div>
+
+<p>将<code>num</code>的值改为自己确定的聚类步数，然后保存文件。</p>
+<p>在命令行中执行：</p>
+<div class="codehilite"><pre><span></span>python get_result.py
+</pre></div>
+
+<p>执行结束后会生成<code>clusterlist.txt</code>,<code>represent_cluster.txt</code>两个文件：</p>
+<ul>
+<li><code>clusterlist.txt</code>储存了最后的聚类结果。即所有结果聚类为指定数量的类，以及每类中有哪些结构。</li>
+<li><code>represent_cluster.txt</code>中即是提取了每类中的代表结构的列表，也就是整个结构筛选的最终结果列表。其形式是每行为选出的结构文件的绝对路径。</li>
+</ul>
+<h2 id="4">4    使用流程总结<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>由于第二步绘制聚类结果分析图的过程需要GUI环境，即需要在本地的Linux系统中进行，所以整个使用流程需要在两个不同的环境下进行。整个使用流程总结如下：</p>
+<ol>
+<li>
+<p>在 <strong>集群上</strong> <code>BCM/</code>文件夹下执行：</p>
+<p><div class="codehilite"><pre><span></span>f2py -c -m fbcm BCMfunc.f90 car2sphe.f90 spherical.f90
+</pre></div>
+命令编译生成<code>fbcm.so</code>文件。</p>
+</li>
+<li>
+<p>修改<code>calculate&amp;cluster.py</code>文件，将其中<code>folderpath</code>变量改为需要计算的结构储存文件夹绝对路径。然后在 <strong>集群上</strong> <code>BCM/</code>文件夹下执行：
+    <code>python calculate&amp;cluster.py</code></p>
+</li>
+<li>
+<p>计算结束后将<code>BCM/</code>文件夹拷贝到 <strong>本地Linux</strong> 系统，在其中执行：
+    <div class="codehilite"><pre><span></span>python plot_cluster.py
+</pre></div>
+    默认只生成*聚类距离变化趋势图*</p>
+</li>
+<li>
+<p>根据分析图像或自主需求确定聚类步数，在 <strong>集群上</strong> <code>BCM/</code>文件夹下修改<code>get_result.py</code>中<code>num</code>变量为最终确定的聚类步数并保存，然后执行：
+    <div class="codehilite"><pre><span></span>python get_result.py
+</pre></div>
+    得到最终结果列表<code>represent_cluster.txt</code></p>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../SortStructure/" title="大量结构中去除相似结构算法开发" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                大量结构中去除相似结构算法开发
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../vasplearn/" title="第一性原理计算软件VASP使用学习" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                第一性原理计算软件VASP使用学习
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2019 Xie & Wang
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="None" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="None" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="None" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="None" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.627ea402.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="../../search/main.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
