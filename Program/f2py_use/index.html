@@ -553,6 +553,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Reaserch/Structure_of_code_pack/" title="Structure_of_code_pack" class="md-nav__link">
+      Structure_of_code_pack
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -896,14 +908,12 @@
 </ol>
 <p>下面详细介绍每种方式的使用流程：</p>
 <h2 id="_3">最快的直接使用方式<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p><div class="codehilite"><pre><span></span>f2py -c fname.f -m fname
-</pre></div>
+<p><pre class="codehilite"><code class="language-bash">f2py -c fname.f -m fname</code></pre>
 其中<code>fname.f</code>为fortran文件的名字，<code>fname</code>为生成的python模块的名字。</p>
 <h2 id="pyf">生成<code>.pyf</code>文件的使用方法<a class="headerlink" href="#pyf" title="Permanent link">&para;</a></h2>
-<p><div class="codehilite"><pre><span></span>f2py fib1.f -m fib2 -h fib1.pyf
-</pre></div>
+<p><pre class="codehilite"><code>f2py fib1.f -m fib2 -h fib1.pyf</code></pre>
 使用以上的命令会生成名为<code>fib1.pyf</code>的文件，其内容如下：</p>
-<p><div class="codehilite"><pre><span></span>!    -*- f90 -*-
+<p><pre class="codehilite"><code>!    -*- f90 -*-
 python module fib2 ! in 
     interface  ! in :fib2
         subroutine fib(a,n) ! in :fib2:fib1.f
@@ -914,12 +924,11 @@ python module fib2 ! in
 end python module fib2
 
 ! This file was auto-generated with f2py (version:2.28.198-1366).
-! See http://cens.ioc.ee/projects/f2py2e/
-</pre></div>
+! See http://cens.ioc.ee/projects/f2py2e/</code></pre>
 其主要内容为解析的fortran文件的内容，会列出所有包含的<code>subroutine</code>的标题，参数和参数定义。</p>
 <p>生成此文件的目的为可以在其中加入<code>intent(in)</code>,<code>intent(out)</code>,<code>depend(n)</code>字符来明确参数的输入输出和依赖特性。</p>
 <p>修改后的<code>.pyf</code> 文件如下：</p>
-<p><div class="codehilite"><pre><span></span>!    -*- f90 -*-
+<p><pre class="codehilite"><code>!    -*- f90 -*-
 python module fib2 
     interface
         subroutine fib(a,n)
@@ -927,44 +936,39 @@ python module fib2
             integer intent(in) :: n
         end subroutine fib
     end interface 
-end python module fib2
-</pre></div>
+end python module fib2</code></pre>
 随后执行如下命令生成python模块。</p>
-<div class="codehilite"><pre><span></span>f2py -c fib2.pyf fib1.f
-</pre></div>
+<pre class="codehilite"><code>f2py -c fib2.pyf fib1.f</code></pre>
 
 <h2 id="fortran">在fortran源码中加入注释的使用方式<a class="headerlink" href="#fortran" title="Permanent link">&para;</a></h2>
 <p>直接在fortran源码中加入注释：</p>
-<p><div class="codehilite"><pre><span></span><span class="c">!f2py intent(in) n</span>
-<span class="c">!f2py intent(out) a</span>
-<span class="c">!f2py depend(n) a</span>
-</pre></div>
+<p><pre class="codehilite"><code class="language-fortran">!f2py intent(in) n
+!f2py intent(out) a
+!f2py depend(n) a</code></pre>
 来明确输入输出及依赖，例子如下：
-<div class="codehilite"><pre><span></span><span class="c">! FILE: FIB3.F</span>
-      <span class="k">SUBROUTINE </span><span class="n">FIB</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
-<span class="c">!</span>
-<span class="c">!     CALCULATE FIRST N FIBONACCI NUMBERS</span>
-<span class="c">!</span>
-      <span class="kt">INTEGER </span><span class="n">N</span>
-      <span class="kt">REAL</span><span class="o">*</span><span class="mi">8</span> <span class="n">A</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-<span class="c">!f2py intent(in) n</span>
-<span class="c">!f2py intent(out) a</span>
-<span class="c">!f2py depend(n) a</span>
-      <span class="k">DO </span><span class="n">I</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span>
-         <span class="k">IF</span> <span class="p">(</span><span class="n">I</span><span class="p">.</span><span class="n">EQ</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span> <span class="k">THEN</span>
-<span class="k">            </span><span class="n">A</span><span class="p">(</span><span class="n">I</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.0D0</span>
-         <span class="n">ELSEIF</span> <span class="p">(</span><span class="n">I</span><span class="p">.</span><span class="n">EQ</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span> <span class="k">THEN</span>
-<span class="k">            </span><span class="n">A</span><span class="p">(</span><span class="n">I</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.0D0</span>
-         <span class="k">ELSE </span>
-<span class="k">            </span><span class="n">A</span><span class="p">(</span><span class="n">I</span><span class="p">)</span> <span class="o">=</span> <span class="n">A</span><span class="p">(</span><span class="n">I</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">A</span><span class="p">(</span><span class="n">I</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-         <span class="n">ENDIF</span>
-      <span class="n">ENDDO</span>
-      <span class="k">END</span>
-<span class="c">! END FILE FIB3.F</span>
-</pre></div>
+<pre class="codehilite"><code class="language-fortran">! FILE: FIB3.F
+      SUBROUTINE FIB(A,N)
+!
+!     CALCULATE FIRST N FIBONACCI NUMBERS
+!
+      INTEGER N
+      REAL*8 A(N)
+!f2py intent(in) n
+!f2py intent(out) a
+!f2py depend(n) a
+      DO I=1,N
+         IF (I.EQ.1) THEN
+            A(I) = 0.0D0
+         ELSEIF (I.EQ.2) THEN
+            A(I) = 1.0D0
+         ELSE 
+            A(I) = A(I-1) + A(I-2)
+         ENDIF
+      ENDDO
+      END
+! END FILE FIB3.F</code></pre>
 随后执行命令：
-<div class="codehilite"><pre><span></span>f2py -c -m fib3 fib3.f
-</pre></div>
+<pre class="codehilite"><code class="language-bash">f2py -c -m fib3 fib3.f</code></pre>
 即可生成python模块。</p>
 <h2 id="python">生成的具体python函数<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
 <p>在使用过程中，具体生成的python函数需要从运行过程中显示的信息来判断。</p>

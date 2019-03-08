@@ -473,6 +473,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Structure_of_code_pack/" title="Structure_of_code_pack" class="md-nav__link">
+      Structure_of_code_pack
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -918,23 +930,22 @@ ABINIT软件可以计算具有任何化学成分的分子，纳米结构和固�
 <p>下面的configure步骤是安装最关键的步骤，这一步包括了环境的配置和具体生成具有什么功能的abinit的设置，设置后的编译是不变的，只有配置这一步有改变。</p>
 <p>在集群上编译abinit的时候最好使用文件来储存configure信息，在其中详细配置编译器，数学库，串并行等特点。</p>
 <p>现在在五洲上编译成功的configure file主要内容如下：</p>
-<div class="codehilite"><pre><span></span><span class="nv">prefix</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/usr/mpiabinit&quot;</span>
-<span class="nv">CC</span><span class="o">=</span><span class="s2">&quot;mpicc&quot;</span>
-<span class="nv">CXX</span><span class="o">=</span><span class="s2">&quot;mpicxx&quot;</span>
-<span class="nv">FC</span><span class="o">=</span><span class="s2">&quot;mpiifort&quot;</span>
-<span class="nv">enable_mpi</span><span class="o">=</span><span class="s2">&quot;yes&quot;</span>
-<span class="nv">with_mpi_incs</span><span class="o">=</span><span class="s2">&quot;-I/opt/intel/compilers_and_libraries_2018.1.163/linux/mpi/include64&quot;</span>
-<span class="nv">with_mpi_level</span><span class="o">=</span><span class="s2">&quot;2&quot;</span>
-<span class="nv">with_mpi_libs</span><span class="o">=</span><span class="s2">&quot;-L/opt/intel/compilers_and_libraries_2018.1.163/linux/mpi/lib64 -lmpi&quot;</span>
-<span class="nv">with_trio_flavor</span><span class="o">=</span><span class="s2">&quot;netcdf&quot;</span>
-<span class="nv">with_fft_flavor</span><span class="o">=</span><span class="s2">&quot;fftw3-mkl&quot;</span>
-<span class="nv">with_fft_incs</span><span class="o">=</span><span class="s2">&quot;-I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include&quot;</span>
-<span class="nv">with_fft_libs</span><span class="o">=</span><span class="s2">&quot;-L</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/lib/intel64 -Wl,--start-group  -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -lpthread -lm -ldl&quot;</span>
-<span class="nv">with_linalg_flavor</span><span class="o">=</span><span class="s2">&quot;mkl&quot;</span>
-<span class="nv">with_linalg_incs</span><span class="o">=</span><span class="s2">&quot;-I</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/include&quot;</span>
-<span class="nv">with_linalg_libs</span><span class="o">=</span><span class="s2">&quot;-L</span><span class="si">${</span><span class="nv">MKLROOT</span><span class="si">}</span><span class="s2">/lib/intel64 -Wl,--start-group  -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -lpthread -lm -ldl&quot;</span>
-<span class="nv">with_dft_flavor</span><span class="o">=</span><span class="s2">&quot;libxc&quot;</span>
-</pre></div>
+<pre class="codehilite"><code class="language-bash">prefix="${HOME}/usr/mpiabinit"
+CC="mpicc"
+CXX="mpicxx"
+FC="mpiifort"
+enable_mpi="yes"
+with_mpi_incs="-I/opt/intel/compilers_and_libraries_2018.1.163/linux/mpi/include64"
+with_mpi_level="2"
+with_mpi_libs="-L/opt/intel/compilers_and_libraries_2018.1.163/linux/mpi/lib64 -lmpi"
+with_trio_flavor="netcdf"
+with_fft_flavor="fftw3-mkl"
+with_fft_incs="-I${MKLROOT}/include"
+with_fft_libs="-L${MKLROOT}/lib/intel64 -Wl,--start-group  -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -lpthread -lm -ldl"
+with_linalg_flavor="mkl"
+with_linalg_incs="-I${MKLROOT}/include"
+with_linalg_libs="-L${MKLROOT}/lib/intel64 -Wl,--start-group  -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -lpthread -lm -ldl"
+with_dft_flavor="libxc"</code></pre>
 
 <h3 id="complie">complie<a class="headerlink" href="#complie" title="Permanent link">&para;</a></h3>
 <ul>

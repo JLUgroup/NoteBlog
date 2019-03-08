@@ -407,13 +407,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_6" title="总结" class="md-nav__link">
-    总结
-  </a>
-  
-</li>
-      
       
       
       
@@ -548,6 +541,18 @@
   <li class="md-nav__item">
     <a href="../../Reaserch/Fundamental_of_EPM/" title="EPM相关的基础知识" class="md-nav__link">
       EPM相关的基础知识
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Reaserch/Structure_of_code_pack/" title="Structure_of_code_pack" class="md-nav__link">
+      Structure_of_code_pack
     </a>
   </li>
 
@@ -839,13 +844,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_6" title="总结" class="md-nav__link">
-    总结
-  </a>
-  
-</li>
-      
       
       
       
@@ -867,49 +865,33 @@
 <p><a href="https://markdown-docs-zh.readthedocs.io/zh_CN/latest/">MkDocs中文文档</a></p>
 <h2 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>使用pip安装：</p>
-<div class="codehilite"><pre><span></span>pip install mkdocs
-</pre></div>
+<pre class="codehilite"><code class="language-bash">pip install mkdocs</code></pre>
 
 <h2 id="_2">使用<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>新建项目： 略，见中文文档</p>
 <p>建立项目后的目录结构：</p>
-<div class="codehilite"><pre><span></span><span class="p">|</span>
-<span class="p">|</span>--mkdocs.yml
-<span class="p">|</span>
-<span class="p">|</span>--docs
-    <span class="p">|</span>
-    <span class="p">|</span>--index.md
-    <span class="p">|</span>
-    ...
-</pre></div>
+<pre class="codehilite"><code class="language-bash">|
+|--mkdocs.yml
+|
+|--docs
+    |
+    |--index.md
+    |
+    ...</code></pre>
 
 <p>其中<code>mkdocs.yml</code>文件为站点的配置文件，而站点内容则全部以<code>.md</code>文件的形式存放在<code>docs</code>文件夹中。</p>
 <p>站点内容的组织形式则在配置文件中以目录树的形式确定。</p>
 <h3 id="_3">本地测试<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>在配置文件相同目录下使用：</p>
-<div class="codehilite"><pre><span></span>mkdocs serve
-</pre></div>
+<pre class="codehilite"><code class="language-bash">mkdocs serve</code></pre>
 
 <p>在浏览器中打开得到的网址即可查看网站效果，并可以一边配置文件或文档内容修改一边预览效果。</p>
 <h3 id="_4">建立本地站点<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>在配置文件目录下执行：</p>
-<div class="codehilite"><pre><span></span>mkdocs build
-</pre></div>
+<pre class="codehilite"><code class="language-bash">mkdocs build</code></pre>
 
 <p>会建立一个名为<code>site</code>的目录，即建立的静态站点，下一步只需将其发布即可。</p>
 <h3 id="_5">发布<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>若在Gitpage上发布则不用在本地生成静态站点，直接在配置文件目录下执行：</p>
-<div class="codehilite"><pre><span></span>mkdocs gh-deploy
-</pre></div>
-
-<p>即可完美实现直接生成站点并推送到gh分支。</p>
-<h2 id="_6">总结<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>使用流程：</p>
-<ul>
-<li>最好在做出任何改动前执行<code>git pull</code>来更新源码。</li>
-<li>做出自己的改动，使用发布命令<code>mkdocs gh-deploy</code>发布（无需先建立站点）。此步就发布了站点。</li>
-<li>最后再执行<code>git push</code>将源码更新到master分支上（已经添加了.gitignore文件，site文件夹不会更新到master分支）</li>
-</ul>
                 
                   
                 

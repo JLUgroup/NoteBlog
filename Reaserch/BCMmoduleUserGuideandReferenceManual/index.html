@@ -473,6 +473,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Structure_of_code_pack/" title="Structure_of_code_pack" class="md-nav__link">
+      Structure_of_code_pack
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1129,8 +1141,7 @@
 </ul>
 <p>其它python2.7版本应该也可以完成<code>fbcm.so</code>的生成操作。</p>
 <p>在配置好环境后在<code>BCM/</code>文件夹下执行下面的命令：</p>
-<div class="codehilite"><pre><span></span>f2py -c -m fbcm BCMfunc.f90 car2sphe.f90 spherical.f90
-</pre></div>
+<pre class="codehilite"><code>f2py -c -m fbcm BCMfunc.f90 car2sphe.f90 spherical.f90</code></pre>
 
 <p>命令执行结束后若在文件夹中生成了<code>fbcm.so</code>文件则说明编译成功了。就可以开始使用程序了。</p>
 <h2 id="3-3">3    使用程序3步完成结构筛选<a class="headerlink" href="#3-3" title="Permanent link">&para;</a></h2>
@@ -1141,16 +1152,15 @@
 </blockquote>
 <p>此步进行的计算为，计算所有结构的BCM矩阵并完成整个层次聚类，将聚类信息保存下来。</p>
 <p>首先打开<code>calculate&amp;cluster.py</code>文件，其内容如下：</p>
-<p><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">bcmanalys</span> <span class="kn">import</span> <span class="n">__cluster</span>
+<p><pre class="codehilite"><code class="language-python">from bcmanalys import __cluster
 
-<span class="n">folderpath</span> <span class="o">=</span> <span class="s1">&#39;your structer files storage folderpath&#39;</span>
+folderpath = 'your structer files storage folderpath'
 
-<span class="n">__cluster</span><span class="p">(</span><span class="n">folderpath</span><span class="p">)</span>
-</pre></div>
+__cluster(folderpath)
+</code></pre>
 将其中<code>folderpath</code>变量改为需要计算的所有结构存储文件夹的绝对路径。程序会计算路径文件夹下所有结构文件，可以存在非结构文件。</p>
 <p>修改完毕后在命令行中执行：</p>
-<div class="codehilite"><pre><span></span>python calculate&amp;cluster.py
-</pre></div>
+<pre class="codehilite"><code>python calculate&amp;cluster.py</code></pre>
 
 <p>执行过程中会输出正在计算的文件路径，执行结束后会生成三个文件：</p>
 <ul>
@@ -1176,14 +1186,14 @@
 <p><strong>绘图函数并不直接保存图像，而是弹出<code>matplotlib</code>模块自带的查看器并在其中显示图像。这样做的原因是在分析大量结构的聚类结果时保存整个树状图或聚类距离变化趋势图的意义不大，需要在其自带查看器中进行局部放大分析。所以绘图操作的执行需要在一个GUI环境中进行，也就是无法在集群上进行。但这一步操作并不会调用<code>fbcm.so</code>文件，只需要具有<code>NumPy</code>模块和<code>matplotlib</code>模块的python环境即可。</strong></p>
 </blockquote>
 <p>上一步操作执行完毕后生成了聚类的结果信息，我们需要对聚类结果进行分析。在<code>ploy_cluster.py</code>文件内提供了两个聚类结果分析绘图函数，其内容如下：</p>
-<p><div class="codehilite"><pre><span></span><span class="c1"># coding: utf-8</span>
+<p><pre class="codehilite"><code class="language-python"># coding: utf-8
 
-<span class="kn">from</span> <span class="nn">clusteranalys</span> <span class="kn">import</span> <span class="n">plotcluster</span>
-<span class="kn">from</span> <span class="nn">clusteranalys</span> <span class="kn">import</span> <span class="n">plotgen_d</span>
+from clusteranalys import plotcluster
+from clusteranalys import plotgen_d
 
-<span class="c1">#plotcluster() #聚类树状图，若需要聚类树状图需去掉本行开头注释</span>
-<span class="n">plotgen_d</span><span class="p">()</span>    <span class="c1">#聚类距离变化趋势图</span>
-</pre></div>
+#plotcluster() #聚类树状图，若需要聚类树状图需去掉本行开头注释
+plotgen_d()    #聚类距离变化趋势图
+</code></pre>
 想要得到哪种图像就执行对应的生成函数，默认第一个函数是注释掉的，即不执行的。若想要绘制聚类树状图需要去掉其生成函数前的注释，并将第二个函数前加入注释。若同时绘制两种图像需要将第一幅图像关闭后才能查看第二幅图像。</p>
 <p>执行<code>python plot_cluster.py</code>即可生成图片。</p>
 <h4 id="322">3.2.2 分析图像<a class="headerlink" href="#322" title="Permanent link">&para;</a></h4>
@@ -1214,8 +1224,7 @@
 <li>
 <p>若从聚类距离分析图某点根据其确定代数，可以打开<code>cluster.txt</code>详细确定其位置。</p>
 <p><code>cluster.txt</code>文件中每一行代表一步聚类的过程，其包含的信息有如下含义：
-<div class="codehilite"><pre><span></span>(合并的类标号1，合并的类标号2，合并的两类之间距离，合并后类中元素个数）
-</pre></div>
+<pre class="codehilite"><code>(合并的类标号1，合并的类标号2，合并的两类之间距离，合并后类中元素个数）</code></pre>
 所以用于确定聚类步数的为第三列距离信息，每一行的行号即为聚类的步数。</p>
 <blockquote>
 <p>对于上图中存在距离突变的聚类步数，我们在其对应的<code>cluster.txt</code>文件中可找到其详细为第2865步聚类后之后的聚类距离发生了突变，据此我们可以选择聚类步数为2865步。
@@ -1230,18 +1239,16 @@
 <p>确定了聚类的步数后，就可以生成最后的聚类结果。即所有结果聚类为指定数量的类，以及每类中有哪些结构。</p>
 <p>之后需要进行提取每类的代表结构：对于一个类，我们计算其中每个结构与其它所有同一类中结构的距离并求和，我们取与同类结构距离之和最小的结构来代表这个类。</p>
 <p>执行这两个操作的函数在文件<code>get_result.py</code>中。打开文件<code>get_result.py</code>，其内容如下：</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">clusteranalys</span> <span class="kn">import</span> <span class="n">__genget</span>
-<span class="kn">from</span> <span class="nn">bcmanalys</span> <span class="kn">import</span> <span class="n">__reprecluster</span>
+<pre class="codehilite"><code class="language-python">from clusteranalys import __genget
+from bcmanalys import __reprecluster
 
-<span class="n">num</span> <span class="o">=</span> <span class="s1">&#39;decided generation number&#39;</span>
-<span class="n">__genget</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-<span class="n">__reprecluster</span><span class="p">()</span>
-</pre></div>
+num = 'decided generation number'
+__genget(num)
+__reprecluster()</code></pre>
 
 <p>将<code>num</code>的值改为自己确定的聚类步数，然后保存文件。</p>
 <p>在命令行中执行：</p>
-<div class="codehilite"><pre><span></span>python get_result.py
-</pre></div>
+<pre class="codehilite"><code>python get_result.py</code></pre>
 
 <p>执行结束后会生成<code>clusterlist.txt</code>,<code>represent_cluster.txt</code>两个文件：</p>
 <ul>
@@ -1253,8 +1260,7 @@
 <ol>
 <li>
 <p>在 <strong>集群上</strong> <code>BCM/</code>文件夹下执行：</p>
-<p><div class="codehilite"><pre><span></span>f2py -c -m fbcm BCMfunc.f90 car2sphe.f90 spherical.f90
-</pre></div>
+<p><pre class="codehilite"><code>f2py -c -m fbcm BCMfunc.f90 car2sphe.f90 spherical.f90</code></pre>
 命令编译生成<code>fbcm.so</code>文件。</p>
 </li>
 <li>
@@ -1263,14 +1269,12 @@
 </li>
 <li>
 <p>计算结束后将<code>BCM/</code>文件夹拷贝到 <strong>本地Linux</strong> 系统，在其中执行：
-    <div class="codehilite"><pre><span></span>python plot_cluster.py
-</pre></div>
+    <pre class="codehilite"><code>python plot_cluster.py</code></pre>
     默认只生成*聚类距离变化趋势图*</p>
 </li>
 <li>
 <p>根据分析图像或自主需求确定聚类步数，在 <strong>集群上</strong> <code>BCM/</code>文件夹下修改<code>get_result.py</code>中<code>num</code>变量为最终确定的聚类步数并保存，然后执行：
-    <div class="codehilite"><pre><span></span>python get_result.py
-</pre></div>
+    <pre class="codehilite"><code>python get_result.py</code></pre>
     得到最终结果列表<code>represent_cluster.txt</code></p>
 </li>
 </ol>

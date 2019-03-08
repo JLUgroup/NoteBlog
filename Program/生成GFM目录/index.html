@@ -600,6 +600,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Reaserch/Structure_of_code_pack/" title="Structure_of_code_pack" class="md-nav__link">
+      Structure_of_code_pack
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -992,150 +1004,141 @@
 <p>GFM即<code>github flavoured markdown</code>，是不支持自动生成目录的。</p>
 <p>经过努力，实现了自动生成目录的方法。</p>
 <p>在本仓库中有名为<code>gh-md-toc</code>的文件，在同步到本地后使用
-<div class="codehilite"><pre><span></span>chmod a+x gh-md-toc
-</pre></div>
+<pre class="codehilite"><code>chmod a+x gh-md-toc</code></pre>
 改变其权限*虽然不知道有什么用*。</p>
 <h2 id="_3">使用方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="_4">对于本地文档<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>在写好<code>.md</code> 文件后，执行类似于下面的命令。
-<div class="codehilite"><pre><span></span>➥ ./gh-md-toc ~/projects/Dockerfile.vim/README.md                                                                                                                                               
+<pre class="codehilite"><code class="language-bash">➥ ./gh-md-toc ~/projects/Dockerfile.vim/README.md                                                                                                                                               
 
-Table of <span class="nv">Contents</span>
-<span class="o">=================</span>
+Table of Contents
+=================
 
-  * <span class="o">[</span>Dockerfile.vim<span class="o">](</span><span class="c1">#dockerfilevim)</span>
-  * <span class="o">[</span>Screenshot<span class="o">](</span><span class="c1">#screenshot)</span>
-  * <span class="o">[</span>Installation<span class="o">](</span><span class="c1">#installation)</span>
-        * <span class="o">[</span>OR using Pathogen:<span class="o">](</span><span class="c1">#or-using-pathogen)</span>
-        * <span class="o">[</span>OR using Vundle:<span class="o">](</span><span class="c1">#or-using-vundle)</span>
-  * <span class="o">[</span>License<span class="o">](</span><span class="c1">#license)</span>
-</pre></div></p>
+  * [Dockerfile.vim](#dockerfilevim)
+  * [Screenshot](#screenshot)
+  * [Installation](#installation)
+        * [OR using Pathogen:](#or-using-pathogen)
+        * [OR using Vundle:](#or-using-vundle)
+  * [License](#license)</code></pre></p>
 <p>生成的即为目录内容，需要将目录内容粘贴至文档中需要生成目录的位置。</p>
 <h3 id="_5">对于远程文档<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>➥ ./gh-md-toc https://github.com/ekalinin/envirius/blob/master/README.md
+<pre class="codehilite"><code class="language-bash">➥ ./gh-md-toc https://github.com/ekalinin/envirius/blob/master/README.md
 
-Table of <span class="nv">Contents</span>
-<span class="o">=================</span>
+Table of Contents
+=================
 
-  * <span class="o">[</span>envirius<span class="o">](</span><span class="c1">#envirius)</span>
-    * <span class="o">[</span>Idea<span class="o">](</span><span class="c1">#idea)</span>
-    * <span class="o">[</span>Features<span class="o">](</span><span class="c1">#features)</span>
-  * <span class="o">[</span>Installation<span class="o">](</span><span class="c1">#installation)</span>
-  * <span class="o">[</span>Uninstallation<span class="o">](</span><span class="c1">#uninstallation)</span>
-  * <span class="o">[</span>Available plugins<span class="o">](</span><span class="c1">#available-plugins)</span>
-  * <span class="o">[</span>Usage<span class="o">](</span><span class="c1">#usage)</span>
-    * <span class="o">[</span>Check available plugins<span class="o">](</span><span class="c1">#check-available-plugins)</span>
-    * <span class="o">[</span>Check available versions <span class="k">for</span> each plugin<span class="o">](</span><span class="c1">#check-available-versions-for-each-plugin)</span>
-    * <span class="o">[</span>Create an environment<span class="o">](</span><span class="c1">#create-an-environment)</span>
-    * <span class="o">[</span>Activate/deactivate environment<span class="o">](</span><span class="c1">#activatedeactivate-environment)</span>
-      * <span class="o">[</span>Activating in a new shell<span class="o">](</span><span class="c1">#activating-in-a-new-shell)</span>
-      * <span class="o">[</span>Activating in the same shell<span class="o">](</span><span class="c1">#activating-in-the-same-shell)</span>
-    * <span class="o">[</span>Get list of environments<span class="o">](</span><span class="c1">#get-list-of-environments)</span>
-    * <span class="o">[</span>Get current activated environment<span class="o">](</span><span class="c1">#get-current-activated-environment)</span>
-    * <span class="o">[</span>Do something in environment without enabling it<span class="o">](</span><span class="c1">#do-something-in-environment-without-enabling-it)</span>
-    * <span class="o">[</span>Get help<span class="o">](</span><span class="c1">#get-help)</span>
-    * <span class="o">[</span>Get <span class="nb">help</span> <span class="k">for</span> a command<span class="o">](</span><span class="c1">#get-help-for-a-command)</span>
-  * <span class="o">[</span>How to add a plugin?<span class="o">](</span><span class="c1">#how-to-add-a-plugin)</span>
-    * <span class="o">[</span>Mandatory elements<span class="o">](</span><span class="c1">#mandatory-elements)</span>
-      * <span class="o">[</span>plug_list_versions<span class="o">](</span><span class="c1">#plug_list_versions)</span>
-      * <span class="o">[</span>plug_url_for_download<span class="o">](</span><span class="c1">#plug_url_for_download)</span>
-      * <span class="o">[</span>plug_build<span class="o">](</span><span class="c1">#plug_build)</span>
-    * <span class="o">[</span>Optional elements<span class="o">](</span><span class="c1">#optional-elements)</span>
-      * <span class="o">[</span>Variables<span class="o">](</span><span class="c1">#variables)</span>
-      * <span class="o">[</span>Functions<span class="o">](</span><span class="c1">#functions)</span>
-    * <span class="o">[</span>Examples<span class="o">](</span><span class="c1">#examples)</span>
-  * <span class="o">[</span>Example of the usage<span class="o">](</span><span class="c1">#example-of-the-usage)</span>
-  * <span class="o">[</span>Dependencies<span class="o">](</span><span class="c1">#dependencies)</span>
-  * <span class="o">[</span>Supported OS<span class="o">](</span><span class="c1">#supported-os)</span>
-  * <span class="o">[</span>Tests<span class="o">](</span><span class="c1">#tests)</span>
-  * <span class="o">[</span>Version History<span class="o">](</span><span class="c1">#version-history)</span>
-  * <span class="o">[</span>License<span class="o">](</span><span class="c1">#license)</span>
-  * <span class="o">[</span>README in another language<span class="o">](</span><span class="c1">#readme-in-another-language)</span>
-</pre></div>
+  * [envirius](#envirius)
+    * [Idea](#idea)
+    * [Features](#features)
+  * [Installation](#installation)
+  * [Uninstallation](#uninstallation)
+  * [Available plugins](#available-plugins)
+  * [Usage](#usage)
+    * [Check available plugins](#check-available-plugins)
+    * [Check available versions for each plugin](#check-available-versions-for-each-plugin)
+    * [Create an environment](#create-an-environment)
+    * [Activate/deactivate environment](#activatedeactivate-environment)
+      * [Activating in a new shell](#activating-in-a-new-shell)
+      * [Activating in the same shell](#activating-in-the-same-shell)
+    * [Get list of environments](#get-list-of-environments)
+    * [Get current activated environment](#get-current-activated-environment)
+    * [Do something in environment without enabling it](#do-something-in-environment-without-enabling-it)
+    * [Get help](#get-help)
+    * [Get help for a command](#get-help-for-a-command)
+  * [How to add a plugin?](#how-to-add-a-plugin)
+    * [Mandatory elements](#mandatory-elements)
+      * [plug_list_versions](#plug_list_versions)
+      * [plug_url_for_download](#plug_url_for_download)
+      * [plug_build](#plug_build)
+    * [Optional elements](#optional-elements)
+      * [Variables](#variables)
+      * [Functions](#functions)
+    * [Examples](#examples)
+  * [Example of the usage](#example-of-the-usage)
+  * [Dependencies](#dependencies)
+  * [Supported OS](#supported-os)
+  * [Tests](#tests)
+  * [Version History](#version-history)
+  * [License](#license)
+  * [README in another language](#readme-in-another-language)</code></pre>
 
 <h3 id="_6">对于多个文档<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>➥ ./gh-md-toc <span class="se">\</span>
-    https://github.com/aminb/rust-for-c/blob/master/hello_world/README.md <span class="se">\</span>
-    https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md <span class="se">\</span>
-    https://github.com/aminb/rust-for-c/blob/master/primitive_types_and_operators/README.md <span class="se">\</span>
+<pre class="codehilite"><code class="language-bash">➥ ./gh-md-toc \
+    https://github.com/aminb/rust-for-c/blob/master/hello_world/README.md \
+    https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md \
+    https://github.com/aminb/rust-for-c/blob/master/primitive_types_and_operators/README.md \
     https://github.com/aminb/rust-for-c/blob/master/unique_pointers/README.md
 
-  * <span class="o">[</span>Hello world<span class="o">](</span>https://github.com/aminb/rust-for-c/blob/master/hello_world/README.md#hello-world<span class="o">)</span>
+  * [Hello world](https://github.com/aminb/rust-for-c/blob/master/hello_world/README.md#hello-world)
 
-  * <span class="o">[</span>Control Flow<span class="o">](</span>https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md#control-flow<span class="o">)</span>
-    * <span class="o">[</span>If<span class="o">](</span>https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md#if<span class="o">)</span>
-    * <span class="o">[</span>Loops<span class="o">](</span>https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md#loops<span class="o">)</span>
-    * <span class="o">[</span>For loops<span class="o">](</span>https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md#for-loops<span class="o">)</span>
-    * <span class="o">[</span>Switch/Match<span class="o">](</span>https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md#switchmatch<span class="o">)</span>
-    * <span class="o">[</span>Method call<span class="o">](</span>https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md#method-call<span class="o">)</span>
+  * [Control Flow](https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md#control-flow)
+    * [If](https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md#if)
+    * [Loops](https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md#loops)
+    * [For loops](https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md#for-loops)
+    * [Switch/Match](https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md#switchmatch)
+    * [Method call](https://github.com/aminb/rust-for-c/blob/master/control_flow/README.md#method-call)
 
-  * <span class="o">[</span>Primitive Types and Operators<span class="o">](</span>https://github.com/aminb/rust-for-c/blob/master/primitive_types_and_operators/README.md#primitive-types-and-operators<span class="o">)</span>
+  * [Primitive Types and Operators](https://github.com/aminb/rust-for-c/blob/master/primitive_types_and_operators/README.md#primitive-types-and-operators)
 
-  * <span class="o">[</span>Unique Pointers<span class="o">](</span>https://github.com/aminb/rust-for-c/blob/master/unique_pointers/README.md#unique-pointers<span class="o">)</span>
-</pre></div>
+  * [Unique Pointers](https://github.com/aminb/rust-for-c/blob/master/unique_pointers/README.md#unique-pointers)</code></pre>
 
 <h3 id="_7">本地与远程结合<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>➥ ./gh-md-toc <span class="se">\</span>
-    ~/projects/Dockerfile.vim/README.md <span class="se">\</span>
+<pre class="codehilite"><code class="language-bash">➥ ./gh-md-toc \
+    ~/projects/Dockerfile.vim/README.md \
     https://github.com/ekalinin/sitemap.s/blob/master/README.md
 
-  * <span class="o">[</span>Dockerfile.vim<span class="o">](</span>~/projects/Dockerfile.vim/README.md#dockerfilevim<span class="o">)</span>
-  * <span class="o">[</span>Screenshot<span class="o">](</span>~/projects/Dockerfile.vim/README.md#screenshot<span class="o">)</span>
-  * <span class="o">[</span>Installation<span class="o">](</span>~/projects/Dockerfile.vim/README.md#installation<span class="o">)</span>
-        * <span class="o">[</span>OR using Pathogen:<span class="o">](</span>~/projects/Dockerfile.vim/README.md#or-using-pathogen<span class="o">)</span>
-        * <span class="o">[</span>OR using Vundle:<span class="o">](</span>~/projects/Dockerfile.vim/README.md#or-using-vundle<span class="o">)</span>
-  * <span class="o">[</span>License<span class="o">](</span>~/projects/Dockerfile.vim/README.md#license<span class="o">)</span>
+  * [Dockerfile.vim](~/projects/Dockerfile.vim/README.md#dockerfilevim)
+  * [Screenshot](~/projects/Dockerfile.vim/README.md#screenshot)
+  * [Installation](~/projects/Dockerfile.vim/README.md#installation)
+        * [OR using Pathogen:](~/projects/Dockerfile.vim/README.md#or-using-pathogen)
+        * [OR using Vundle:](~/projects/Dockerfile.vim/README.md#or-using-vundle)
+  * [License](~/projects/Dockerfile.vim/README.md#license)
 
-  * <span class="o">[</span>sitemap.js<span class="o">](</span>https://github.com/ekalinin/sitemap.js/blob/master/README.md#sitemapjs<span class="o">)</span>
-    * <span class="o">[</span>Installation<span class="o">](</span>https://github.com/ekalinin/sitemap.js/blob/master/README.md#installation<span class="o">)</span>
-    * <span class="o">[</span>Usage<span class="o">](</span>https://github.com/ekalinin/sitemap.js/blob/master/README.md#usage<span class="o">)</span>
-    * <span class="o">[</span>License<span class="o">](</span>https://github.com/ekalinin/sitemap.js/blob/master/README.md#license<span class="o">)</span>
+  * [sitemap.js](https://github.com/ekalinin/sitemap.js/blob/master/README.md#sitemapjs)
+    * [Installation](https://github.com/ekalinin/sitemap.js/blob/master/README.md#installation)
+    * [Usage](https://github.com/ekalinin/sitemap.js/blob/master/README.md#usage)
+    * [License](https://github.com/ekalinin/sitemap.js/blob/master/README.md#license)
 
-Created by <span class="o">[</span>gh-md-toc<span class="o">](</span>https://github.com/ekalinin/github-markdown-toc<span class="o">)</span>
-</pre></div>
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)</code></pre>
 
 <h3 id="_8">自动插入和更新目录<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>首先在文档中希望插入目录的地方插入以下两行：
-<div class="codehilite"><pre><span></span>&lt;!--ts--&gt;
-&lt;!--te--&gt;
-</pre></div>
+<pre class="codehilite"><code>&lt;!--ts--&gt;
+&lt;!--te--&gt;</code></pre>
 运行以下命令，便会在文档中自动插入目录：
-<div class="codehilite"><pre><span></span>$ ./gh-md-toc --insert README.test.md
+<pre class="codehilite"><code class="language-bash">$ ./gh-md-toc --insert README.test.md
 
-Table of <span class="nv">Contents</span>
-<span class="o">=================</span>
+Table of Contents
+=================
 
-   * <span class="o">[</span>gh-md-toc<span class="o">](</span><span class="c1">#gh-md-toc)</span>
-   * <span class="o">[</span>Installation<span class="o">](</span><span class="c1">#installation)</span>
-   * <span class="o">[</span>Usage<span class="o">](</span><span class="c1">#usage)</span>
-      * <span class="o">[</span>STDIN<span class="o">](</span><span class="c1">#stdin)</span>
-      * <span class="o">[</span>Local files<span class="o">](</span><span class="c1">#local-files)</span>
-      * <span class="o">[</span>Remote files<span class="o">](</span><span class="c1">#remote-files)</span>
-      * <span class="o">[</span>Multiple files<span class="o">](</span><span class="c1">#multiple-files)</span>
-      * <span class="o">[</span>Combo<span class="o">](</span><span class="c1">#combo)</span>
-   * <span class="o">[</span>Tests<span class="o">](</span><span class="c1">#tests)</span>
-   * <span class="o">[</span>Dependency<span class="o">](</span><span class="c1">#dependency)</span>
+   * [gh-md-toc](#gh-md-toc)
+   * [Installation](#installation)
+   * [Usage](#usage)
+      * [STDIN](#stdin)
+      * [Local files](#local-files)
+      * [Remote files](#remote-files)
+      * [Multiple files](#multiple-files)
+      * [Combo](#combo)
+   * [Tests](#tests)
+   * [Dependency](#dependency)
 
-!! TOC was added into: <span class="s1">&#39;README.test.md&#39;</span>
-!! Origin version of the file: <span class="s1">&#39;README.test.md.orig.2018-02-04_192655&#39;</span>
-!! TOC added into a separate file: <span class="s1">&#39;README.test.md.toc.2018-02-04_192655&#39;</span>
+!! TOC was added into: 'README.test.md'
+!! Origin version of the file: 'README.test.md.orig.2018-02-04_192655'
+!! TOC added into a separate file: 'README.test.md.toc.2018-02-04_192655'
 
 
-Created by <span class="o">[</span>gh-md-toc<span class="o">](</span>https://github.com/ekalinin/github-markdown-toc<span class="o">)</span>
-</pre></div></p>
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)</code></pre></p>
 <p>当文档更新后，运行<code>./gh-md-toc --insert ...</code>，目录便会自动更新。</p>
 <p>注意到上面的命令执行完有
-<div class="codehilite"><pre><span></span>!! TOC was added into: &#39;README.test.md&#39;
-!! Origin version of the file: &#39;README.test.md.orig.2018-02-04_192655&#39;
-!! TOC added into a separate file: &#39;README.test.md.toc.2018-02-04_192655&#39;
-</pre></div>
+<pre class="codehilite"><code>!! TOC was added into: 'README.test.md'
+!! Origin version of the file: 'README.test.md.orig.2018-02-04_192655'
+!! TOC added into a separate file: 'README.test.md.toc.2018-02-04_192655'</code></pre>
 即程序生成了两个文件来存放源文件备份和生成的toc，这样很糟糕，所以我改动了源代码使得这两个文件被自动删除了。</p>
 <p>于是现在的输出是这样的：
-<div class="codehilite"><pre><span></span>!! TOC was added into: &#39;生成GFM目录.md&#39;
-!! Origin version of the file: &#39;生成GFM目录.md.orig.2018-10-07_141040&#39;
-!! TOC added into a separate file: &#39;生成GFM目录.md.toc.2018-10-07_141040&#39;
-And they have been removed, hahahahahahahahaha
-</pre></div></p>
+<pre class="codehilite"><code>!! TOC was added into: '生成GFM目录.md'
+!! Origin version of the file: '生成GFM目录.md.orig.2018-10-07_141040'
+!! TOC added into a separate file: '生成GFM目录.md.toc.2018-10-07_141040'
+And they have been removed, hahahahahahahahaha</code></pre></p>
 <h3 id="_9">输出目录文件<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p><code>./gh-md-toc https://github.com/ekalinin/envirius/blob/master/README.md &gt; table-of-contents.md</code>
 在命令的最后加上<code>&gt; filename.md</code>即可输出文件目录到指定文件。</p>
@@ -1145,9 +1148,8 @@ And they have been removed, hahahahahahahahaha
 <ol>
 <li><code>./gh-md-toc filename.md</code>直接在命令行中显示文件目录，并且可以同时显示多个文件目录。</li>
 <li>首先在文件中插入：
-   <div class="codehilite"><pre><span></span>&lt;!--ts--&gt;
-&lt;!--te--&gt;
-</pre></div>
+   <pre class="codehilite"><code>&lt;!--ts--&gt;
+&lt;!--te--&gt;</code></pre>
    之后执行<code>./gh-md-toc --insert filename.md</code>可直接在文件中插入目录，或者更新目录。</li>
 <li><code>./gh-md-toc filename.md &gt; filename2.md</code>可将目录导入到<code>filename2.md</code>文件中。</li>
 </ol>
@@ -1158,12 +1160,10 @@ And they have been removed, hahahahahahahahaha
 <p>所以在写每个文档时都应加入</p>
 </li>
 </ol>
-<div class="codehilite"><pre><span></span>&lt;!--ts--&gt;
-&lt;!--te--&gt;
-</pre></div>
+<pre class="codehilite"><code class="language-markdown">&lt;!--ts--&gt;
+&lt;!--te--&gt;</code></pre>
 
-<div class="codehilite"><pre><span></span>在完成后执行插入目录命令`./gh-md-toc --insert filename.md`。
-</pre></div>
+<pre class="codehilite"><code>在完成后执行插入目录命令`./gh-md-toc --insert filename.md`。</code></pre>
 
 
 <ol>
@@ -1171,9 +1171,8 @@ And they have been removed, hahahahahahahahaha
 </ol>
 <p>在文件夹中执行<code>./gh-md-toc *.md &gt; README.md</code>即可。</p>
 <p>所以在写完某文档或修改某文档结构后要执行两个命令：</p>
-<div class="codehilite"><pre><span></span>./gh-md-toc --insert filename.md
-./gh-md-toc *.md &gt; README.md
-</pre></div>
+<pre class="codehilite"><code class="language-bash">./gh-md-toc --insert filename.md
+./gh-md-toc *.md &gt; README.md</code></pre>
 
 <p>这样就保证了文档中的目录和总的目录都得到了更新。</p>
 <h3 id="_12">第二版工作流程<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>

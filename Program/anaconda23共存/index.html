@@ -518,6 +518,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Reaserch/Structure_of_code_pack/" title="Structure_of_code_pack" class="md-nav__link">
+      Structure_of_code_pack
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -820,16 +832,15 @@
 </li>
 <li>
 <p>在安装完毕基础环境后，不需要创建虚拟环境（也不要修改bashrc文件），直接执行以下代码：
-<div class="codehilite"><pre><span></span>$ bash Anaconda2-5.3.0-Linux-x86_64.sh -b -p <span class="nv">$HOME</span>/anaconda3/envs/py2
-$ rm -f <span class="nv">$HOME</span>/anaconda3/envs/py2/bin/conda*
-$ rm -f <span class="nv">$HOME</span>/anaconda3/envs/py2/conda-meta/conda-*
-$ rm -f <span class="nv">$HOME</span>/anaconda3/envs/py2/bin/activate
-$ rm -f <span class="nv">$HOME</span>/anaconda3/envs/py2/bin/deactivate
-$ <span class="nb">cd</span> <span class="nv">$HOME</span>/anaconda3/envs/py2/bin
+<pre class="codehilite"><code class="language-bash">$ bash Anaconda2-5.3.0-Linux-x86_64.sh -b -p $HOME/anaconda3/envs/py2
+$ rm -f $HOME/anaconda3/envs/py2/bin/conda*
+$ rm -f $HOME/anaconda3/envs/py2/conda-meta/conda-*
+$ rm -f $HOME/anaconda3/envs/py2/bin/activate
+$ rm -f $HOME/anaconda3/envs/py2/bin/deactivate
+$ cd $HOME/anaconda3/envs/py2/bin
 $ ln -s ../../../bin/conda .
 $ ln -s ../../../bin/activate .
-$ ln -s ../../../bin/deactivate .
-</pre></div>
+$ ln -s ../../../bin/deactivate .</code></pre>
 上面代码的解释为：
 首先将anaconda2安装到anaconda3的<code>env</code>文件夹下的<code>py2</code>文件夹。<code>env</code>文件夹是anaconda用来存放虚拟环境的文件夹，所以这样安装相当于创建了一个虚拟环境。
 但在使用此虚拟环境时，由于新安装的anaconda无法使用旧anaconda的<code>conda</code>,<code>activate</code>,<code>deactivate</code>命令会导致错误，所以把新安装的anaconda中这些命令删除并软连接为旧anaconda的命令，这样在使用过程中就不会出错了。</p>
