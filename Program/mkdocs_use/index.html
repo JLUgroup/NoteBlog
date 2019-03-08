@@ -407,6 +407,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" title="总结" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+      
       
       
       
@@ -832,6 +839,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" title="总结" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+      
       
       
       
@@ -884,6 +898,18 @@
 
 <p>会建立一个名为<code>site</code>的目录，即建立的静态站点，下一步只需将其发布即可。</p>
 <h3 id="_5">发布<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>若在Gitpage上发布则不用在本地生成静态站点，直接在配置文件目录下执行：</p>
+<div class="codehilite"><pre><span></span>mkdocs gh-deploy
+</pre></div>
+
+<p>即可完美实现直接生成站点并推送到gh分支。</p>
+<h2 id="_6">总结<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>使用流程：</p>
+<ul>
+<li>最好在做出任何改动前执行<code>git pull</code>来更新源码。</li>
+<li>做出自己的改动，使用发布命令<code>mkdocs gh-deploy</code>发布（无需先建立站点）。此步就发布了站点。</li>
+<li>最后再执行<code>git push</code>将源码更新到master分支上（已经添加了.gitignore文件，site文件夹不会更新到master分支）</li>
+</ul>
                 
                   
                 
