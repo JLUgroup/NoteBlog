@@ -1,0 +1,147 @@
+# Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+# Project information
+site_name: On The Way
+site_description: A Academy Corner for Everyone
+site_author: Xie Jia-hao, Wang xiao-yu
+site_url: null
+
+# Repository
+repo_name: null
+repo_url: null
+edit_uri: ""
+
+# Copyright
+copyright: 'Copyright &copy; 2018 - 2019 Xie & Wang'
+
+# Configuration
+theme:
+  name: null
+  custom_dir: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: true #false
+  search_index_only: false #true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: zh
+  feature:
+    tabs: true
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/favicon.png
+  logo:
+    icon: "\uE80C"
+
+# Customization
+extra:
+  social:
+    - type: globe
+      link: 
+    - type: github-alt
+      link: 
+    - type: twitter
+      link: 
+    - type: linkedin
+      link: 
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - 首页: README.md
+#  - 基础数学导论:
+#      - 代数学:
+#          - 集合，映射和关系: MathBasic/基础数学导论-01代数学-01集合、映射和关系.md
+
+#  - 物理:
+  - 编程笔记:
+      - Program/anaconda23共存.md
+      - Program/github使用.md
+      - Program/os.walk用法.md
+      - Program/scipy学习.md
+      - Program/f2py_use.md
+      - Program/mkdocs_use.md
+      - Program/生成GFM目录.md
+  - 科研笔记:
+      - 铁电与SHG:
+          - Reaserch/ferroelectric_learn.md
+          - Reaserch/PFM&SKFM.md
+          - Reaserch/SHG_learn.md
+      - EPM:
+          - Reaserch/Fundamental_of_EPM.md
+      - 结构表征方法:
+          - Reaserch/SortStructure.md
+          - Reaserch/BCMmoduleUserGuideandReferenceManual.md
+      - 科研软件:
+        - VASP软件: 
+          - Reaserch/vasplearn.md
+        - Abinit软件: 
+          - Reaserch/abinit_learn.md
+        - Exciting软件: 
+          - Reaserch/Exciting.md
+ # - 学习笔记:
+  - 阅读笔记:
+          - ReadingNotes/跃迁.md
+
+  
+
+# Google Analytics
+google_analytics:
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - auto
+
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
